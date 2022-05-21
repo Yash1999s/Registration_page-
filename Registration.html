@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration_Form | YasH</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            padding: 10px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        .container{
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 60px 18px;
+            border-radius: 7px;
+            box-shadow: 12px 22px 22px #815b9a
+
+        }
+        .container .title {
+             font-size: 30px;
+             font-weight: bold;
+             position: relative;
+             text-align: center;
+        }
+        /* .container .title::before{
+            content: ' ';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6); 
+        }*/
+        .container form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between ;
+            margin: 13px 0px 13px 0px;
+        }
+        .input-box{
+            margin-bottom: 15px;
+        }
+        from .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+        }
+        .user-details .input-box .details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .user-details .input-box input{
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px ;
+            border-bottom-width: 2px;
+            transition: all 3s ease;
+        }
+        .user-details  .input-box input:focus,
+        .user-details .input-box input:valid{
+            border-color:  #9b59b6 ;
+        }
+        
+       .gender-title{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .category{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 14px 90px 14px 0px; 
+        }
+        .category label{
+            display: flex;
+            align-items: center;
+        }
+        .dot{
+            height: 18px;
+            width: 18px;
+            background: #d9d9d9;
+            border-radius: 10px;
+            border: 5px solid transparent;
+            margin-right: 10px;
+            transition: all 1s ease;
+        }
+        #dot-1:checked ~ .category label .one{
+            border-color: #d9d9d9;
+            background: #9b59b6;
+        }
+        #dot-2:checked ~ .category label .two{
+            border-color: #d9d9d9;
+            background: #9b59b6;
+        }
+        form input[type="radio"]{
+            display: none;
+        }
+        form .button{
+            height: 45px;   
+            margin: 45px 0px;
+        }
+        .button input{
+            height: 100%;
+            width: 276%;
+            outline-color: none;
+            color: white;
+            border: none;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+             font-size: 20px;
+             font-weight: 500;
+             border-radius: 7px;
+             letter-spacing: 1px;
+        }
+        .button input:hover{
+            background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Student Registration</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full name</span>
+                            <input type="text" placeholder="Enter your name" required>                       
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                            <input type="text" placeholder="Enter your Username" required>                       
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Registration Number</span>
+                            <input type="text" placeholder="Enter your Reg. no." required>                       
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                            <input type="text" placeholder="Enter your Phone Number" required>                       
+                        </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                            <input type="text" placeholder="Enter your Password" required>                       
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                            <input type="text" placeholder="Confirm your password" required>                       
+                    </div>
+                    <div class="gender-detail">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <span class="gender-title">Gender</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Register">
+                        </div>
+                    </div>
+                </div>
+            </form>       
+    </div>
+</body>
+</html>
